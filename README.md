@@ -2,12 +2,12 @@
 minFTPD provide most of functions of FTP server. it's very simple, in order to learn the principle of FTP server.
 
 # How to use minFTPD?
-> make
+> make  
 > ./minftpd
 
-0.0.0.0 listen address which minFTPD listens as defasult, 5188 ports as default.
-You can use leapFTP in windows test minFTPD.
-And you can use source Insight learn the source code.
+0.0.0.0 listen address which minFTPD listens as defasult, 5188 ports as default.  
+You can use leapFTP in windows test minFTPD.  
+And you can use source Insight learn the source code.  
 
 # Code Tree
 > common.h --- common data structure
