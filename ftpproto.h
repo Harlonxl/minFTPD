@@ -2,6 +2,7 @@
 #define _FTP_PROTO_H_
 
 #include "session.h"
+#include "sysutil.h"
 
 void handle_child(session_t *sess);
 
