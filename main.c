@@ -17,10 +17,15 @@ int main(int argc, char *argv[]) {
 
 	session_t sess = {
 		// 控制连接
-		0, -1, "", "", "", 
+		0, -1, "", "", "",
+		// 数据连接
+		NULL, -1, -1,
 		// 父子间通道
-		-1, -1
+		-1, -1,
+		// FTP协议状态
+		0
 	};
+	signal(SIGCHLD, SIG_IGN);
 	int listenfd = tcp_server(tunable_listen_address, tunable_listen_port);
 	int conn; 
 	pid_t pid;
