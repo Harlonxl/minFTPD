@@ -17,5 +17,16 @@ int recv_fd(const int sock_fd);
 const char *statbuf_get_perms(struct stat *sbuf);
 const char *statbuf_get_date(struct stat *sbuf);
 
+int lock_file_read(int fd);
+int lock_file_write(int fd);
+int unlock_file(int fd);
+
+long get_time_sec();
+long get_time_usec();
+void nano_sleep(double second);
+
+void activate_oobinline(int fd);
+void activate_sigurg(int fd);
+
 
 #endif /*_SYS_UTIL_H_*/

@@ -18,6 +18,7 @@
 #include <signal.h>
 #include <linux/capability.h>
 #include <sys/syscall.h>
+#include <sys/sendfile.h>
 
 #include <stdio.h>
 #include <stdlib.h>

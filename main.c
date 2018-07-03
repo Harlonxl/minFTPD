@@ -7,6 +7,8 @@
 #include "tunable.h"
 #include "parseconf.h"
 
+extern session_t *p_sess;
+
 int main(int argc, char *argv[]) {
 	// 加载配置项和配置文件
 	parseconf_load_file(MINIFTP_CONF);
@@ -19,12 +21,17 @@ int main(int argc, char *argv[]) {
 		// 控制连接
 		0, -1, "", "", "",
 		// 数据连接
-		NULL, -1, -1,
+		NULL, -1, -1, 0,
 		// 父子间通道
 		-1, -1,
 		// FTP协议状态
-		0
+		0, 0, NULL, 0,
+		0, 0, 0, 0
 	};
+
+	p_sess = &sess;
+	sess.bw_upload_rate_max = tunable_upload_max_rate;
+	sess.bw_download_rate_max = tunable_download_max_rate;
 	signal(SIGCHLD, SIG_IGN);
 	int listenfd = tcp_server(tunable_listen_address, tunable_listen_port);
 	int conn; 
@@ -46,7 +53,7 @@ int main(int argc, char *argv[]) {
 			sess.ctrl_fd = conn;
 			begin_session(&sess);
 		} else {
-			close(listenfd);
+			close(conn);
 		}
 	}
 
