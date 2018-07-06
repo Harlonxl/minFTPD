@@ -10,9 +10,9 @@ You can use leapFTP in windows test minFTPD.<br/>
 And you can use source Insight learn the source code.<br/>
 
 # Code Tree
-> common.h --- common data structure<br/>
-> ftpcodes.h --- FTP status codes<br/>
-> ftpproto.c --- FTP command parse and operation<br/>
+> common.h 			common data structure<br/>
+> ftpcodes.h 		FTP status codes<br/>
+> ftpproto.c  		FTP command parse and operation<br/>
 > ftpproto.h --- ftpproto head file<br/>
 > main.c ---- setup minFTPD<br/>
 > Makefile --- Makefile file<br/>
