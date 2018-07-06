@@ -14,48 +14,29 @@ And you can use source Insight learn the source code.<br/>
 minFTPD
 │--- common.h 				common data structure
 │--- ftpcodes.h  			FTP status codes
-│--- ftpproto.c
-│--- ftpproto.h
-│--- ftpproto_test.c
-│--- hash.c
-│--- hash.h
-│--- hash_test.c
-│--- main.c
-│--- Makefile
-│--- miniftp.conf
-│--- parseconf.c
-│--- parseconf.h
-│--- parseconf_test.c
-│--- privparent.c
-│--- privparent.h
-│--- privsock.c
-│--- privsock.h
-│--- session.c
-│--- session.h
-│--- str.c
-│--- str.h
-│--- sysutil.c
-│--- sysutil.h
-│--- tunable.c
-|--- tunable.h
+│--- ftpproto.c 			FTP command parse and operation
+│--- ftpproto.h 			ftpproto head file
+│--- ftpproto_test.c 		ftprpoto test file
+│--- hash.c 				hash function
+│--- hash.h 				hash head file
+│--- hash_test.c  			hash test file
+│--- main.c 				setup minFTPD
+│--- Makefile 				Makefile file
+│--- miniftp.conf 			configuration file
+│--- parseconf.c  			parse configuration item
+│--- parseconf.h  			parseconf head file
+│--- parseconf_test.c 		parseconf test file
+│--- privparent.c 			nobody process command parse
+│--- privparent.h 			privparent head file
+│--- privsock.c 			interprocess communication function 
+│--- privsock.h 			privsock head file
+│--- session.c 				session managentment
+│--- session.h 				session head file
+│--- str.c 					base string function
+│--- str.h 					str head file
+│--- sysutil.c  			base common function, include network、file operation
+│--- sysutil.h 				sysutil headfile
+│--- tunable.c 				configuration item definition
+|--- tunable.h  			tunable head file
 ```
-> common.h              common data structure<br/>
-> ftpcodes.h 		<br/>
-> ftpproto.c  		FTP command parse and operation<br/>
-> ftpproto.h --- ftpproto head file<br/>
-> main.c ---- setup minFTPD<br/>
-> Makefile --- Makefile file<br/>
-> miniftp.conf --- configuration file<br/>
-> parseconf.c --- parse configuration item<br/>
-> parseconf.h --- parseconf head file<br/>
-> parseconf_test.c --- parseconf test file<br/>
-> privparent.c --- nobody process command parse<br/>
-> privparent.h --- privparent head file<br/>
-> session.c --- session managent<br/>
-> session.h --- session head file<br/>
-> str.c --- base string function<br/>
-> str.h --- str head file<br/>
-> sysutil.c --- base common function<br/>
-> sysutil.h --- sysutil headfile<br/>
-> tunable.c --- configuration item definition<br/>
-> tunable.h --- tunable head file<br/>
+
