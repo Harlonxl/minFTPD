@@ -19,6 +19,7 @@
 #include <linux/capability.h>
 #include <sys/syscall.h>
 #include <sys/sendfile.h>
+#include <sys/wait.h>
 
 #include <stdio.h>
 #include <stdlib.h>
