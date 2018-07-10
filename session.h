@@ -28,6 +28,9 @@ typedef struct session {
 	unsigned int bw_download_rate_max;
 	long bw_transfer_start_sec;
 	long bw_transfer_start_usec;
+	// 连接数限制
+	unsigned int num_clients;
+	unsigned int num_this_ip;
 } session_t;
 
 void begin_session(session_t *sess);
